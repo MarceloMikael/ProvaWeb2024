@@ -1,0 +1,9 @@
+PROPS DRILLING é um problema pois tem um sintaxe muito verbosa e que pode dificultar o entendimento em casos com muitos componentes, o uso do Contexto resolve esse problema pois ao disponibilizar as informações a partir do componente pai, apenas aqueles interessados nessas informações solicitam ao usar o useContext.
+
+Exemplo: 
+App: Define o tema (theme) e passa como prop para ComponentA.
+ComponentA: Recebe o tema e passa como prop para ComponentB.
+ComponentB: Recebe o tema e passa como prop para ComponentC.
+ComponentC: Usa o tema.
+
+Com o uso de contexto, o App definiria o tema e somente o ComponenteC iria usar, os outros não precisariam fazer nada
